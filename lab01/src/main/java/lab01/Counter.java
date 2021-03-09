@@ -6,6 +6,7 @@ public class Counter {
         counter = number;
     }
     public void increase(int value){
+        if (value >= 100) throw new IllegalArgumentException();
         if (counter + value <= 100) counter = counter + value;
         else {
             System.out.println("Value is too high");
@@ -13,6 +14,7 @@ public class Counter {
         }
     }
     public void decrease(int value){
+        if (value >= 100) throw new IllegalArgumentException();
         if (counter - value >= 0) counter = counter - value;
         else {
             System.out.println("Value is too low");
